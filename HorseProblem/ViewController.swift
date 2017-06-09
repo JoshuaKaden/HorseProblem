@@ -10,6 +10,7 @@ import UIKit
 
 final class ViewController: UIViewController {
 
+    private let autoButton = TapButton()
     private let goButton = TapButton()
     private let textLabel = UILabel()
     private let titleLabel = UILabel()
@@ -18,6 +19,15 @@ final class ViewController: UIViewController {
         super.viewDidLoad()
         
         title = NSLocalizedString("The Horse Problem", comment: "")
+        
+        autoButton.backgroundColor = UIColor.blue
+        autoButton.title = NSLocalizedString("Automated", comment: "")
+        autoButton.tapAction = {
+            [weak self] in
+            let vc = AutoViewController()
+            self?.navigationController?.pushViewController(vc, animated: true)
+        }
+        view.addSubview(autoButton)
         
         goButton.backgroundColor = UIColor.blue
         goButton.title = NSLocalizedString("Start", comment: "")
@@ -51,7 +61,11 @@ final class ViewController: UIViewController {
         goButton.size = CGSize(width: 300, height: 60)
         goButton.centerHorizontallyInSuperview()
         goButton.y = textLabel.maxY + 24
-        
-        view.centerSubviewsVertically([titleLabel, textLabel, goButton])
+
+        autoButton.size = CGSize(width: 300, height: 60)
+        autoButton.centerHorizontallyInSuperview()
+        autoButton.y = goButton.maxY + 24
+
+        view.centerSubviewsVertically([titleLabel, textLabel, goButton, autoButton])
     }
 }

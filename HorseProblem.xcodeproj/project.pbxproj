@@ -20,6 +20,8 @@
 		93035ACB1EEB04600002DF99 /* Horse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93035ACA1EEB04600002DF99 /* Horse.swift */; };
 		93035ACD1EEB0B6E0002DF99 /* RacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93035ACC1EEB0B6E0002DF99 /* RacesViewController.swift */; };
 		93035ACF1EEB0DC80002DF99 /* Race.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93035ACE1EEB0DC80002DF99 /* Race.swift */; };
+		93035AD11EEB347B0002DF99 /* AutoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93035AD01EEB347B0002DF99 /* AutoViewController.swift */; };
+		93035AD31EEB37330002DF99 /* RaceRunner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93035AD21EEB37330002DF99 /* RaceRunner.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		93035ACA1EEB04600002DF99 /* Horse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Horse.swift; sourceTree = "<group>"; };
 		93035ACC1EEB0B6E0002DF99 /* RacesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RacesViewController.swift; sourceTree = "<group>"; };
 		93035ACE1EEB0DC80002DF99 /* Race.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Race.swift; sourceTree = "<group>"; };
+		93035AD01EEB347B0002DF99 /* AutoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoViewController.swift; sourceTree = "<group>"; };
+		93035AD21EEB37330002DF99 /* RaceRunner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RaceRunner.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,11 +76,13 @@
 			children = (
 				93035AAE1EEAFD570002DF99 /* AppDelegate.swift */,
 				93035AB51EEAFD570002DF99 /* Assets.xcassets */,
+				93035AD01EEB347B0002DF99 /* AutoViewController.swift */,
 				93035ACA1EEB04600002DF99 /* Horse.swift */,
 				93035ABA1EEAFD570002DF99 /* Info.plist */,
 				93035AB71EEAFD570002DF99 /* LaunchScreen.storyboard */,
 				93035AB21EEAFD570002DF99 /* Main.storyboard */,
 				93035ACE1EEB0DC80002DF99 /* Race.swift */,
+				93035AD21EEB37330002DF99 /* RaceRunner.swift */,
 				93035ACC1EEB0B6E0002DF99 /* RacesViewController.swift */,
 				93035AC61EEAFFE50002DF99 /* RosterViewController.swift */,
 				93035AC81EEB04560002DF99 /* Stable.swift */,
@@ -163,11 +169,13 @@
 			files = (
 				93035AB11EEAFD570002DF99 /* ViewController.swift in Sources */,
 				93035ACD1EEB0B6E0002DF99 /* RacesViewController.swift in Sources */,
+				93035AD11EEB347B0002DF99 /* AutoViewController.swift in Sources */,
 				93035AC31EEAFF530002DF99 /* UIButton+Setup.swift in Sources */,
 				93035AC91EEB04560002DF99 /* Stable.swift in Sources */,
 				93035ACF1EEB0DC80002DF99 /* Race.swift in Sources */,
 				93035AAF1EEAFD570002DF99 /* AppDelegate.swift in Sources */,
 				93035AC11EEAFEFC0002DF99 /* UIView+Layout.swift in Sources */,
+				93035AD31EEB37330002DF99 /* RaceRunner.swift in Sources */,
 				93035AC51EEAFF770002DF99 /* TapButton.swift in Sources */,
 				93035AC71EEAFFE50002DF99 /* RosterViewController.swift in Sources */,
 				93035ACB1EEB04600002DF99 /* Horse.swift in Sources */,
@@ -334,6 +342,7 @@
 				93035ABF1EEAFD570002DF99 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
