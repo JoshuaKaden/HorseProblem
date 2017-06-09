@@ -8,18 +8,50 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+final class ViewController: UIViewController {
 
+    private let goButton = TapButton()
+    private let textLabel = UILabel()
+    private let titleLabel = UILabel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        title = NSLocalizedString("The Horse Problem", comment: "")
+        
+        goButton.backgroundColor = UIColor.blue
+        goButton.title = NSLocalizedString("Start", comment: "")
+        goButton.tapAction = {
+            [weak self] in
+            let vc = RacesViewController()
+            self?.navigationController?.pushViewController(vc, animated: true)
+        }
+        view.addSubview(goButton)
+        
+        let text = "There are 25 horses. You may race 5 horses at a time, but you do not know the time it took each horse to finish; you only receive rankings (1st, 2nd, 3rd, etc.). In order to find the 3 fastest horses, how many races must you run?"
+        textLabel.lineBreakMode = .byWordWrapping
+        textLabel.numberOfLines = 0
+        textLabel.text = NSLocalizedString(text, comment: "")
+        view.addSubview(textLabel)
+        
+        titleLabel.text = NSLocalizedString("The Horse Problem", comment: "")
+        view.addSubview(titleLabel)
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        titleLabel.sizeToFit()
+        titleLabel.centerHorizontallyInSuperview()
+        
+        textLabel.size = textLabel.sizeThatFits(CGSize(width: view.width - 48, height: view.height))
+        textLabel.centerHorizontallyInSuperview()
+        textLabel.y = titleLabel.maxY + 24
+        
+        goButton.size = CGSize(width: 300, height: 60)
+        goButton.centerHorizontallyInSuperview()
+        goButton.y = textLabel.maxY + 24
+        
+        view.centerSubviewsVertically([titleLabel, textLabel, goButton])
     }
-
-
 }
-
